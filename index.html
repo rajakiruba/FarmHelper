@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 
-
-<!doctype html>
 <html>
     <head><title> test Navbar</title>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <link rel="stylesheet" href="Style_for_AgriHelper.css">
       <link rel="stylesheet" href="collegiateFont.css">
       <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -12,149 +13,20 @@
    
     </head>
     <style>
-    .Vission,.Mission {
-            /* for chrome and safari*/
-            -webkit-animation-duration: 5s;
-            -webkit-animation-name: slideLeft_Right;
+   
 
-            /*for firefox*/
-            -moz-animation-duration: 1s;
-            -moz-animation-name: slideLeft_Right;
 
-              /* for opera*/
-            -o-animation-duration: 1s;
-            -o-animation-name: slideLeft_Right;
-
-              /* Standard syntax*/
-            animation-duration: 5s;
-            animation-name: slideLeft_Right;
-        }
-
-        @-webkit-keyframes slideLeft_Right {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 0%;
-                width: 100%;
-            }
-        }
-
-        @-moz-keyframes slideLeft_Right {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 0%;
-                width: 100%;
-            }
-        }
-         @-o-keyframes slideLeft_Right {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 0%;
-                width: 100%;
-            }
-        }
-          @keyframes slideLeft_Right {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 0%;
-                width: 100%;
-            }
-        }
-         .gfg{
-            /* for chrome and safari*/
-            -webkit-animation-duration: 5s;
-            -webkit-animation-name: slideRight_Left;
-
-            /*for firefox*/
-            -moz-animation-duration: 1s;
-            -moz-animation-name: slideRight_Left;
-
-              /* for opera*/
-            -o-animation-duration: 1s;
-            -o-animation-name: slideRight_Left;
-
-              /* Standard syntax*/
-            animation-duration: 5s;
-            animation-name: slideRight_Left;
-        }
-
-        @-webkit-keyframes slideRight_Left {
-            from {
-                margin-right: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-right: 0%;
-                width: 100%;
-            }
-        }
-
-        @-moz-keyframes slideRight_Left {
-          from {
-                margin-right: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-right: 0%;
-                width: 100%;
-            }
-        }
-         @-o-keyframes slideRight_Left {
-          from {
-                margin-right: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-right: 0%;
-                width: 100%;
-            }
-        }
-          @keyframes slideRight_Left {
-            from {
-                margin-right: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-right: 0%;
-                width: 100%;
-            }
-        }
     </style>
     <body>
-      <div style="    position: fixed;
-      width: 100%;
-      border: 1px solid #555;
-      height: 53px;
-      top: 0;
-      z-index: 1;
-  ">
+      <div class="nav_outBor">
       <nav >
         <div class="navbar_Left" id="Left_navbar">
    
-     <li style="padding: 9px;">   <a href="#"><img onclick="on()" src="sunLogo.png"    alt="logo" style="width:40px;"></a></li>
-       <li ><a class="active" href="#">Home</a></li>
-       <li> <a href="#">Tutorial</a></li>
-       <li> <a href="#">How to do</a></li>
-       <li><a href="#"> Contact Us</a></li>
+     <span style="padding: 9px;" class="Logoless ">   <a href="#"><img onclick="on()" src="sunLogo.png"    alt="logo" style="width:40px;border-radius: 6px;"></a></span>
+       <li class="nav_act home " ><a class="active"   target="_self" href="index.html">Home</a></li>
+       <li class="nav_act"> <a  target="_self" href="Tutorial.html">Tutorial</a></li>
+       <li class="nav_act"> <a  target="_self" href="HowTodo.html">How to do</a></li>
+       <li class="nav_act"><a  target="_self" href="Contactpage.html"> Contact Us</a></li>
        <a href="javascript:void(0);" class="icon" style="margin-top: 13px;" onclick="myFun();"><div class="Bar_design"><i class="fa fa-bars" id="Menu_Bar" ></i></div></a>
      </div>
        <div class="navbar_right" >
@@ -201,7 +73,7 @@
       <section id="EventUpdate" style="margin-top: 95px;">
    <p class="Event_p">Event Area:</p>
  <div class="Event_Area">
-   <p>Event updates:</p>
+   <p>Event updates:</p> 
    <ul>
   <li><a href="">1.Agriculture on maize video.</a></li>
   <li><a href="">2.New update on cow farming.</a></li>
@@ -211,7 +83,7 @@
       <section id="Vission">
 <div class="Vission ">
   <h4>Vission</h4>
-  <li>To help farmers and needy people in farm works.</li>
+  <li>To Agriculture help farmers and needy people in farm works.</li>
   <li>To bring Agriculture and farming in most advanced technology.</li>
 </div>
       </section>
@@ -250,8 +122,7 @@
   } 
       
     
-</script>
-      <script>
+
         var slideIndex = 0;
 
         showSlides();
@@ -279,8 +150,7 @@
           dots[slideIndex-1].className += " activ";
           setTimeout(showSlides, 10000);
         }
-        </script>
-        <script>
+        
 var slideInde = 1;
 showSlide(slideInde);
 
@@ -310,6 +180,14 @@ function showSlide(n) {
   dots[slideInde-1].className += " activ";
 }
 
+      
+          $(document).ready(function(){
+     $('nav div li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+          });
+      
         </script>
 <footer>
   <div class="footer_div" >
@@ -323,14 +201,26 @@ function showSlide(n) {
       <li> <a href="www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a></li>
     </ul>
     </div>
-      <img  src="sunLogo.png"  class="footer_img"  alt="logo" >
-      <p style="    color: white;
-      
-    font-family: poppins;
-    text-align: center;">
-        Copyright <span style="font-size: larger;"> ©</span> 2020 Let2Live Tamilnadu,Inc.All rights reserved.</p> 
+    <div >
+
+
+      <p class="quotes">"More than a bussiness the family farm is a lifestyle 
+                        it is an ideal worth preserving".</p>
+    <div style="height: 87px;
+    border: 1px solid #5d5555;
+    width: 287px;
+    margin: auto;
+"> <span class="let">Let  <p class="live">2</p>  Live</span></div>
+      <p style="   color: white;
+      font-family: poppins;
+      text-align: center;
+      margin: -2px 0px;
+    "> Copyright <span style="font-size: larger;">&#169</span> 2020 Let2Live Tamilnadu,Inc.All rights reserved.</p> 
         <p class="Terms_privacy"><a href=""> Terms of Use</a> | <a href="" target="_blank">Privacy Policy</a></p>
   </div>
+  
 </footer>
     </body>
-  </html>
+</html>
+
+
