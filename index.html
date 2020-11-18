@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+    <head><title> test Navbar</title>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="Style_for_AgriHelper.css">
+      <link rel="stylesheet" href="collegiateFont.css">
+      <link rel="stylesheet" href="poppoins.css">
+      <link href='https://fonts.googleapis.com/css?family=Ewert' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    </head>
+    <style>
+   
+
+
+    </style>
+    <body>
+      <div class="nav_outBor">
+      <nav >
+        <div class="navbar_Left" id="Left_navbar">
+   
+     <span style="padding: 9px;" class="Logoless ">   <a href="#"><img onclick="on()" src="sunlogo.png"    alt="logo" style="width:40px;border-radius: 6px;"></a></span>
+       <li class="nav_act home " ><a class="active"   target="_self" href="index.html">Home</a></li>
+       <li class="nav_act"> <a  target="_self" href="Tutorial.html">Tutorial</a></li>
+       <li class="nav_act"> <a  target="_self" href="HowTodo.html">How to do</a></li>
+       <li class="nav_act"><a  target="_self" href="Contactpage.html"> Contact Us</a></li>
+       <a href="javascript:void(0);" class="icon" style="margin-top: 13px;" onclick="myFun();"><div class="Bar_design"><i class="fa fa-bars" id="Menu_Bar" ></i></div></a>
+     </div>
+       <div class="navbar_right" >
+ 
+         <ul class="AddCart" >  <i class="fa fa-shopping-cart" id="AddToCart"></i></ul>
+         <ul class="btnLogin"><a href="Let2Live_Login.html"><button  class="button" >LogIn</button></ul></a>
+         <ul class="btnSignUp"><a href="Let2Live.html"><button class="button">SignUp</button></ul></a>
+           
+          
+          
+ 
+       </div>
+   
+   
+  
+   </nav>
+  </div>
+  <div>
+  <div class="show_container " >
+    <div class="MySlide">
+      
+      <img src="wp1886331.png" class="imgInside" alt="1">
+    
+    </div>
+    <div class="MySlide cc">
+      <img src="farming.png" class="imgInside" alt="2">
+    </div>
+    <div class="MySlide">
+      <img src="drone.png" class="imgInside" alt="3">
+    </div>
+  
+  <a class="forward" id="ff" onclick="plusSlides(-1)">&#10094</a>
+  <a class="backward" style="cursor: pointer;" onclick="plusSlides(1)">&#10095</a>
+  
+
+  <div class="dotPosition">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+</div>
+</div>
+  <div id="zoom" onclick="off()"> <div class="ImgBackground"><img src="sunLogo.png"  class="ImgSize" alt="logo" ></div></div>
+      <section id="EventUpdate" style="margin-top: 95px;">
+   <p class="Event_p">Event Area:</p>
+ <div class="Event_Area">
+   <p>Event updates:</p> 
+   <ul>
+  <li><a href="">1.Agriculture on maize video.</a></li>
+  <li><a href="">2.New update on cow farming.</a></li>
+</ul>
+</div>
+</section>   
+      <section id="Vission">
+<div class="Vission ">
+  <h4>Vission</h4>
+  <li>To Agriculture help farmers and needy people in farm works.</li>
+  <li>To bring Agriculture and farming in most advanced technology.</li>
+</div>
+      </section>
+      
+      <section id="Mission">
+        <div class="Mission">
+          <h4>Mission</h4>
+          <li>To get million of coustomer in a decade.</li>
+          <li>To bring a site to no.1 in Agriculture helping sector and farm.</li>
+          <li>To make Agriculture easy and less expense.</li>
+          <li>To make Agriculture and farming , compatiable to everyone those who are willing those those two.  </li>
+        </div>
+              </section>
+   
+      
+      <script>
+          function on(){
+              document.getElementById("zoom").style.display="block";
+                          }
+                          function off(){
+              document.getElementById("zoom").style.display="none";
+                          }
+                          
+     
+        function myFun() {
+    var x = document.getElementById("Left_navbar");
+   
+    var x1 = document.getElementsByClassName("navbar_Left")
+   
+    if (x.className === "navbar_Left") {
+      x.className += " responsive";
+      console.log(x.className)
+    } else {
+      x.className = "navbar_Left";
+    }
+  } 
+      
+    
+
+        var slideIndex = 0;
+
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("MySlide");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+       
+          slideIndex++;
+        
+          if (slideIndex > slides.length) {
+          
+          slideIndex = 1
+          
+          }   
+          for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" activ", "");
+      } 
+         
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " activ";
+          setTimeout(showSlides, 10000);
+        }
+        
+var slideInde = 1;
+showSlide(slideInde);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlide(slideInde += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlide(slideInde = n);
+}
+
+function showSlide(n) {
+  var i;
+  var slides = document.getElementsByClassName("MySlide");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideInde = 1}
+  if (n < 1) {slideInde = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" activ", "");
+      }
+  slides[slideInde-1].style.display = "block";
+  dots[slideInde-1].className += " activ";
+}
+
+      
+          $(document).ready(function(){
+     $('nav div li ').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+          });
+      
+        </script>
+<footer>
+  <div class="footer_div" >
+    <div class="icons">
+      <ul style="overflow: hidden; overflow: hidden;
+      ">
+     <li> <a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a></li>
+     <li> <a href="in.linkedin.com
+      " class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+      <li> <a href="twitter.com" class="twitter"><i class="fa fa-twitter"></i></a></li>
+      <li> <a href="www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+    </div>
+    <div >
+
+
+      <p class="quotes">"More than a bussiness the family farm is a lifestyle 
+                        it is an ideal worth preserving".</p>
+    <div style="height: 87px;
+    border: 1px solid #5d5555;
+    width: 287px;
+    margin: auto;
+"> <span class="let">Let  <p class="live">2</p>  Live</span></div>
+      <p style="   color: white;
+      font-family: poppins;
+      text-align: center;
+      margin: -2px 0px;
+    "> Copyright <span style="font-size: larger;">&#169</span> 2020 Let2Live Tamilnadu,Inc.All rights reserved.</p> 
+        <p class="Terms_privacy"><a href=""> Terms of Use</a> | <a href="" target="_blank">Privacy Policy</a></p>
+  </div>
+  
+</footer>
+    </body>
+</html>
+
+
