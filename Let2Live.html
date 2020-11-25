@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Let</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="poppoins.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="signup_login.css">
+    <link rel="stylesheet" href="Style_for_AgriHelper.css">
+    <link href='https://fonts.googleapis.com/css?family=Ewert' rel='stylesheet'>
+    <script src="SignUp_Login.js"></script>
+</head>
+<style>
+.terms {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.terms .discription {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.terms:hover .discription {
+  visibility: visible;
+
+}
+</style>
+<body class="blur-image">
+    <div class="nav_outBor">
+        <nav >
+          <div class="navbar_Left" id="Left_navbar">
+     
+       <span style="padding: 9px;" class="Logoless ">   <a href="#"><img onclick="on()" src="sunlogo.png"    alt="logo" style="width:40px;border-radius: 6px;"></a></span>
+         <li class="nav_act home " ><a   target="_self" href="index.html">Home</a></li>
+         <li class="nav_act"> <a  target="_self" href="Tutorial.html">Tutorial</a></li>
+         <li class="nav_act"> <a  target="_self" href="HowTodo.html">How to do</a></li>
+         <li class="nav_act"><a  target="_self" href="Contactpage.html"> Contact Us</a></li>
+         <a href="javascript:void(0);" class="icon" style="margin-top: 13px;" onclick="myFun();"><div class="Bar_design"><i class="fa fa-bars" id="Menu_Bar" ></i></div></a>
+       </div>
+         <div class="navbar_right" >
+   
+           <ul class="AddCart" >  <i class="fa fa-shopping-cart" id="AddToCart"></i></ul>
+           <ul class="btnLogin"><a href="Let2Live_Login.html"><button  class="button " >LogIn</button></ul></a>
+           <ul class="btnSignUp"><a  href="Let2Live.html"><button class="button  button_hover">SignUp</button></ul></a>
+             
+            
+            
+   
+         </div>
+     
+     
+    
+     </nav>
+    </div>
+    <div>
+ 
+    </div>
+         
+   
+
+    <p style="text-align:center;font-family:poppins;font-size:22px;color:aliceblue;margin-top: 67px;">
+        Please fill form to create an account.
+    </p>
+
+    <div id="zoom" onclick="off()"> <div class="ImgBackground"><img src="sunlogo.png"  class="ImgSize" alt="logo" ></div></div>
+    <div style="width: fit-content;margin: auto;">
+        <div class="borderForForm parentContainer">
+            <form  action="connect.php" method="POST" >
+                <div id="name">
+                    <label>
+                        <b>Your Name:</b>
+                    </label>
+                    <input type="text" style="padding: 6px;" name="firstname" placeholder="Enter First Name" required>
+                    <input type="text" style="padding: 6px;" name="lastname" placeholder="Enter Last Name" required>
+                </div>
+                <div id="DOB">
+                    <label><b>Date of Birth:</b></label>
+                    <input type="date" style="padding: 6px;" name="dob" placeholder="Enter Date of Birth" required><br>
+                </div>
+                <div id="Gender">
+                    <label for=""><b>Gender</b></label>
+                    <input type="radio" style="margin-left:16px ;font-family: sans-serif;" name="gender" id="Male"><label for="Male"><b>Male</b></label>
+                    <input type="radio" style="margin-left:16px ;font-family: sans-serif;" name="gender" id="Female"><label for="Female"><b>Female</b></label>
+                    <input type="radio" style="margin-left:16px ;font-family: sans-serif;" name="gender" id="other"><label for="other"><b>Other</b></label><br>
+                </div>
+                <div id="Email">
+                    <label><b>Email:*</b></label>
+                    <input type="email" style="padding: 6px;" name="email" placeholder="Enter Email"><br>
+                </div>
+                <div id="Password">
+                    <label><b>Create Password:*</b></label>
+                    <input type="password" style="padding: 6px;"   name="createpassword" placeholder="Enter Password" required><br>
+                </div>
+                <div id="ConfirmPassword">
+                    <label><b>Confirm Password:*</b></label>
+                    <input type="password" style="padding: 6px;" name="confirmpassword" placeholder="Enter Confirm Password" required><br>
+
+                </div>
+                
+                <div id="condition">
+                    <p style="font-family:poppins;font-size:15px">
+                        By creating an account read the<br> instruction and sign up <span class="terms" style="color:orangered;text-decoration: none;">
+                                                                                          Terms & Condition.
+                                                                                        <span class="discription">Data can accessed by Admin and yourself your data.</span></span>
+                    </p>
+                </div>
+                <div id="btt">
+                 
+                    <button class="cnt_button" style="margin-left: 87px;" type="submit" value="submit" name="submit"><p id="butt1">Sign Up</p></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p style="   color: white;
+    font-family: poppins;
+    text-align: center;
+    margin: 5px 0px;
+       "> Copyright <span style="font-size: larger;">&#169</span> 2020 Let2Live Tamilnadu,Inc.All rights reserved.</p> 
+    
+</body>
+</html>

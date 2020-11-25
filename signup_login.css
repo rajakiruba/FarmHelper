@@ -1,0 +1,105 @@
+ body {
+
+    margin: 0px;
+    
+   
+    
+}
+
+.grandParentContaniner {
+
+    margin: 179px auto;
+    width: fit-content;
+}
+
+.parentContainer {
+    vertical-align: middle;
+}
+
+    .parentContainer form {
+        padding: 10px;
+      
+    }
+
+#HeadForm {
+    margin-left: 450px;
+    margin-top: 40px;
+}
+
+.borderForForm {
+  
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: limegreen;
+    border: 3px solid white;
+
+}
+
+#name, #DOB, #Email, #Password, #Gender, #ConfirmPassword, #checkbox, #condition, #btt {
+    padding: 6px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+input[type=text], input[type=password], input[type=Email], input[type=date] {
+    font-family: poppins;
+    background: rgba(0, 0, 0,0.1);
+    color: white;
+}
+
+
+
+input[type=text]:hover {
+    background-color: rgba(0, 0, 0,0.6);
+}
+
+input[type=Email]:hover {
+    background-color: rgba(0, 0, 0,0.6);
+}
+
+input[type=date]:hover {
+    background-color: rgba(0, 0, 0,0.6);
+}
+
+input[type=password]:hover {
+    background-color: rgba(0, 0, 0,0.6);
+}
+
+.blur-image{
+    background: url('signupBackground.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+
+
+.modall {
+   
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    
+    background-image: url('');
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0,0.5);
+    margin: 13% auto 15% auto;
+    border: 2px solid #888;
+    width: 52%;
+    border-radius: 15px;
+    height: 258px;
+}
+
+.form-container {
+    margin-left: 62px;
+    margin-top: -35px;
+}
